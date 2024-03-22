@@ -22,6 +22,7 @@ for i in range(max_attempts):
         continue
     if not letter.isalpha():
         print ('Pierdes un intento al no ingresar una letra. Intentalo nuevamente.')
+        continue
     if letter in guessed_letters:
         print("Ya has intentado con esa letra. Intenta con otra.")
         continue
