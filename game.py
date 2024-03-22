@@ -17,6 +17,11 @@ for i in range(max_attempts):
     # Pedir al jugador que ingrese una letra
     letter = input("Ingresa una letra: ").lower()
     # Verificar si la letra ya ha sido adivinada
+    if letter == '':
+        print("Has ingresado un string vacío. Hazlo nuevamente con una letra.")
+        continue
+    if not letter.isalpha():
+        print ('Pierdes un intento al no ingresar una letra. Intentalo nuevamente.')
     if letter in guessed_letters:
         print("Ya has intentado con esa letra. Intenta con otra.")
         continue
